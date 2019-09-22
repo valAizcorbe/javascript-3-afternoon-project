@@ -49,18 +49,13 @@ greeting()
   Sum up the values and return the total number.
 */
 
-// var totalPopulation = (object) => {
-//   var {utah, california, texas, arizona} = object;
-//   return object;
-//   }
-//   totalPopulation({utah: 55, california: 235, texas: 193, arizona: 57})
 
-function totalPopulation ({utah, california, texas, arizona}){
-  let = totalPopulation[obj].reduce((accum, curr) => {
-    return accum += curr
-  },0)
+// function totalPopulation ({utah, california, texas, arizona}){
+//   let = totalPopulation[obj].reduce((accum, curr) => {
+//     return accum += curr
+//   },0)
 
-totalPopulation()
+// totalPopulation()
 
 
 ////////// PROBLEM 4 //////////
@@ -108,6 +103,27 @@ totalPopulation()
   Find the longest array and return that array.
 */
 
-//Code Here
+  // const obj = {
+  //   a: [0,1,22,5],
+  //   b: [1,9,3],
+  //   c: [6,7,7,6,4,3,2]
+  // }
+    
+    
+  function numberGroups( {a, b, c} ) {
+    let arrays = [a, b, c]
+    let longest = [];
+    
+    arrays.forEach( (array, index ) => {
+      if (array.length > longest.length) {
+        longest.push(arrays[index]);
+      }
+    })
+    
+    return longest;
+  }
+  
+  console.log(numberGroups(obj));
+
 
 
