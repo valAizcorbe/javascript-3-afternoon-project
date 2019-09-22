@@ -49,7 +49,13 @@ greeting()
   Sum up the values and return the total number.
 */
 
-function totalPopulation ({utah:3, california:4, texas:7, arizona:6}){
+// var totalPopulation = (object) => {
+//   var {utah, california, texas, arizona} = object;
+//   return object;
+//   }
+//   totalPopulation({utah: 55, california: 235, texas: 193, arizona: 57})
+
+function totalPopulation ({utah, california, texas, arizona}){
   let = totalPopulation[obj].reduce((accum, curr) => {
     return accum += curr
   },0)

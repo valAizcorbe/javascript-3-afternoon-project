@@ -50,19 +50,16 @@ var employees = [
     3. Return the updated employee array.
 */
 
-function employeeUpdater(){
-  for( let key in obj){
-    if (employees.firstName = Theo){
-     delete [key]
-    } else if (employees.firstName = Lorie){
-      return department = 'HR'
-    } 
-  }
+let employeeUpdater = () => {
+  employees.filter((element,index,arr) => {
+    if (element.firstName === 'Theo') {
+      employees.splice(index,1)
+    } else if (element.firstName === 'Lorie'){
+      element.department = 'HR'
+    }
+  })
+  return employees
 }
-
-employeeUpdater()
-
-
 
 ////////// PROBLEM 2 //////////
 
@@ -78,9 +75,17 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
     3. Return the updated array.
 */
 
-//Code Here
+function removeDuplicates (arr){
+  for (var i = 0; i < arr; i++){
+    for (var j = 0; j < arr; j++){
+    if (arr[i] === arr[j]){
+      arr.splice(arr[i], 1)
+    }}
+  }
+  return arr;
+}
 
-
+removeDuplicates(workplaceAccidents)
 
 ////////// PROBLEM 3 //////////
 
@@ -107,8 +112,8 @@ var cat = {
 */
 
 //Code Here
-var grumpyActivity;
-var fluffy2ndFriend;
+var grumpyActivity = cat.catFriends[0].activities[1];
+var fluffy2ndFriend = cat.catFriends[1].name;
 
 
 
@@ -148,9 +153,9 @@ var myCar = {
     3. Change atFaultForAccident from true to false.
 */
 
-//Code Here
-
-
+// function recordCleaner (obj){
+//   for (var key in obj)
+// }
 
 ////////// PROBLEM 5 //////////
 
@@ -167,17 +172,22 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
     4. Return the modified numsArr.
 */
 
-function looper (){
-  for(i = 0; i > numsArr.length; i++){
-    if(numsArr[i] % 2 === 0){
-      return numsArr[i] = even
+function looper(arr){
+
+  for (i = 0 ; i < arr.length ; i++){
+    for (j = 0; j < arr[i].length; j++){
+      if (arr[i] % 2 === 0){
+       arr[i] = "even";
+        }
+      else {
+       arr[j] = "odd"
+        }
+      }
     }
+    return arr;
   }
-  for(j = 0; j > numsArr.length; j++){
-    if(numsArr[j] % 2 === 1){
-      return numsArr[j] = odd
-    }
-  }
-}
+  
+  looper(arr);
+
 
 
