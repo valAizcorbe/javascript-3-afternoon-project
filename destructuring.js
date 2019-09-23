@@ -50,12 +50,11 @@ greeting()
 */
 
 
-// function totalPopulation ({utah, california, texas, arizona}){
-//   let = totalPopulation[obj].reduce((accum, curr) => {
-//     return accum += curr
-//   },0)
+function totalPopulation ({utah, california, texas, arizona}){
+return utah + california + texas + arizona
+}
 
-// totalPopulation()
+totalPopulation({utah: 3, california: 7, texas:5,  arizona: 6})
 
 
 ////////// PROBLEM 4 //////////
@@ -68,11 +67,13 @@ greeting()
   Push these new variables to an array and return the array. 
 */
 
-// function ingredients ({ carb = bread, fat = butter, protein = meat} ) {
-//   let newArr = [];
-//   console.log(newArr.push(ingredients))
-// } 
-// ingredients()
+function ingredients ({carb, fat, protein}) {
+  let newArr = [];
+  return newArr.push({carb: "bread", fat: "butter", protein: "chicken"})
+} 
+
+console.log(newArr)
+
 
 
 
@@ -91,7 +92,11 @@ greeting()
   Find the smallest number of the three and return that number.
 */
 
-//Code Here
+function largeNumbers ({first, second, third}) {
+  let smallest = Math.min(first, second, third)
+  return smallest
+}
+
 
 
 
@@ -103,27 +108,22 @@ greeting()
   Find the longest array and return that array.
 */
 
-  // const obj = {
-  //   a: [0,1,22,5],
-  //   b: [1,9,3],
-  //   c: [6,7,7,6,4,3,2]
-  // }
-    
-    
-  function numberGroups( {a, b, c} ) {
-    let arrays = [a, b, c]
+  function numberGroups({a, b, c}) {
     let longest = [];
-    
-    arrays.forEach( (array, index ) => {
-      if (array.length > longest.length) {
-        longest.push(arrays[index]);
-      }
-    })
-    
-    return longest;
+  if (a.length > b.length && a.length > c.length) {
+        console.log(longest.push(a))
+  } else if (b.length > a.length && b.length > c.length){
+        console.log(longest.push(b))
+  } else if (c.length > a.length && c.length > b.length){
+        console.log(longest.push(c))
+      } 
+      return longest
   }
+    
+    
+
   
-  console.log(numberGroups(obj));
+ 
 
 
 

@@ -50,16 +50,18 @@ var employees = [
     3. Return the updated employee array.
 */
 
+
 let employeeUpdater = () => {
   employees.filter((element,index,arr) => {
     if (element.firstName === 'Theo') {
-      employees.splice(index,1)
+      employees.splice(index, 1)
     } else if (element.firstName === 'Lorie'){
       element.department = 'HR'
     }
   })
   return employees
 }
+
 
 ////////// PROBLEM 2 //////////
 
@@ -75,17 +77,21 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
     3. Return the updated array.
 */
 
-function removeDuplicates (arr){
-  for (var i = 0; i < arr; i++){
-    for (var j = 0; j < arr; j++){
-    if (arr[i] === arr[j]){
-      arr.splice(arr[i], 1)
-    }}
-  }
-  return arr;
+function removeDuplicates(){
+  var dupArr = workplaceAccidents;
+
+  for(let i = 0; i < dupArr.length; i++){
+    for(let j = dupArr.length -1; j > i; j--){
+      if(dupArr[i] === dupArr[j]){
+        dupArr.splice(j,1);
+      }
+      
+    }
+  };
+  return dupArr;
 }
 
-removeDuplicates(workplaceAccidents)
+removeDuplicates();
 
 ////////// PROBLEM 3 //////////
 
@@ -153,9 +159,25 @@ var myCar = {
     3. Change atFaultForAccident from true to false.
 */
 
+function recordCleaner (key){
+  for (let key in myCar){
+    if (key.atFaultForAccident === true){
+      return key.atFaultForAccident = false;
+    }
+  }
+}
+
+recordCleaner(key)
+
 // function recordCleaner (obj){
-//   for (var key in obj)
+//   for (let key in myCar){
+//     if (myCar[key] === true){
+//       return myCar[key] = false;
+//     }
+//   }
 // }
+
+// recordCleaner()
 
 ////////// PROBLEM 5 //////////
 
