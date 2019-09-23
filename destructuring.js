@@ -67,13 +67,22 @@ totalPopulation({utah: 3, california: 7, texas:5,  arizona: 6})
   Push these new variables to an array and return the array. 
 */
 
-function ingredients ({carb, fat, protein}) {
-  let newArr = [];
-  return newArr.push({carb: "bread", fat: "butter", protein: "chicken"})
-} 
+// function ingredients ({carb, fat, protein}) {
+//   let newArr = [];
+//   newArr.push({carb, fat, protein})
+// } 
+// ingredients({carb: "bread", fat: "butter", protein: "chicken"})
 
-console.log(newArr)
 
+function ingredients(obj){
+  let {carb, fat, protein} = obj
+  let newArr = []
+  newArr.push(carb);
+  newArr.push(fat);
+  newArr.push(protein);
+  return newArr
+
+}
 
 
 
@@ -106,22 +115,18 @@ function largeNumbers ({first, second, third}) {
   Write a function called numberGroups that will take a destructured object as it's parameter.
   The object properties will be named a, b, and c and their values will be arrays of numbers.
   Find the longest array and return that array.
-*/
+*/    
 
-  function numberGroups({a, b, c}) {
-    let longest = [];
-  if (a.length > b.length && a.length > c.length) {
-        console.log(longest.push(a))
-  } else if (b.length > a.length && b.length > c.length){
-        console.log(longest.push(b))
-  } else if (c.length > a.length && c.length > b.length){
-        console.log(longest.push(c))
-      } 
-  return longest;
+  function numberGroups({a, b, c}){
+
+    if(a.length > b.length && a.length > c.length){
+      return a
+    }else if( b.length > a.length && b.length > c.length){
+      return b
+    }else if (c.length > a.length && c.length > b.length){
+      return c
+    }
   }
-    
-    
-
   
  
 
